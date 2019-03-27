@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8337D47-75A1-4A16-960E-E6E92A7EB488}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrystalReport</RootNamespace>
+    <AssemblyName>CrystalReport</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.ReportSource.1.0.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.1\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dataset\CombinedRevenue\CombinedRevenue.cs">
+      <DependentUpon>CombinedRevenue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CombinedRevenue\CombinedRevenue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CombinedRevenue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerBalance\CustomerBalance.cs">
+      <DependentUpon>CustomerBalance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerBalance\CustomerBalance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerBalance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerExpense\CustomerExpense.cs">
+      <DependentUpon>CustomerExpense.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerExpense\CustomerExpense.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerExpense.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerPayment\CustomerPayment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerPayment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerPayment\CustomerPaymentGeneral.cs">
+      <DependentUpon>CustomerPaymentGeneral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerPayment\CustomerPaymentGeneral.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerPaymentGeneral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerPricing\CustomerPricing.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerPricing.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerRevenue\CustomerRevenue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerRevenue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerRevenue\CustomerRevenueGeneral.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerRevenueGeneral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomersExpense\CustomersExpense.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomersExpense.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Dispatch\DispatchList.cs">
+      <DependentUpon>DispatchList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Dispatch\DispatchList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DispatchList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DriverAllowance\DriverAllowanceList.cs">
+      <DependentUpon>DriverAllowanceList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DriverAllowance\DriverAllowanceList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriverAllowanceList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DriverDispatch\DriverDispatch.cs">
+      <DependentUpon>DriverDispatch.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DriverDispatch\DriverDispatch.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriverDispatch.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DriverRevenue\DriverRevenue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriverRevenue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Expense\ExpenseDetailList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExpenseDetailList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Expense\ExpenseList.cs">
+      <DependentUpon>ExpenseList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Expense\ExpenseList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExpenseList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\FuelConsumption\FuelConsumption.cs">
+      <DependentUpon>FuelConsumption.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\FuelConsumption\FuelConsumption.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuelConsumption.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\FuelConsumption\FuelConsumptionDetail.cs">
+      <DependentUpon>FuelConsumptionDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\FuelConsumption\FuelConsumptionDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuelConsumptionDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Liabilities\Liabilities.cs">
+      <DependentUpon>Liabilities.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Liabilities\Liabilities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Liabilities.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Liabilities\LiabilitiesDetail.cs">
+      <DependentUpon>LiabilitiesDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Liabilities\LiabilitiesDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiabilitiesDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Liabilities\LiabilitiesPayment.cs">
+      <DependentUpon>LiabilitiesPayment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Liabilities\LiabilitiesPayment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiabilitiesPayment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Maintenance\MaintenanceList.cs">
+      <DependentUpon>MaintenanceList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Maintenance\MaintenanceList1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaintenanceList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Order\OrderList.cs">
+      <DependentUpon>OrderList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Order\OrderList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PartnerBalance\PartnerBalance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartnerBalance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PartnerCustomer\PartnerCustomerExpenseList.cs">
+      <DependentUpon>PartnerCustomerExpenseList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PartnerCustomer\PartnerCustomerExpenseList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartnerCustomerExpenseList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PartnerExpense\PartnerExpenseDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartnerExpenseDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PartnerExpense\PartnerExpenseList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartnerExpenseList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PartnerPayment\PartnerPaymentDetail.cs">
+      <DependentUpon>PartnerPaymentDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PartnerPayment\PartnerPaymentDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartnerPaymentDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PartnerPayment\PartnerPaymentGeneral.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartnerPaymentGeneral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\SupplierExpense\SupplierExpenseList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierExpenseList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TransportExpense\TransportExpense.cs">
+      <DependentUpon>TransportExpense.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TransportExpense\TransportExpense.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransportExpense.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TransportExpense\TransportExpenseList.cs">
+      <DependentUpon>TransportExpenseList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TransportExpense\TransportExpenseList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransportExpenseList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TruckBalance\TruckBalance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TruckBalance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TruckExpense\TruckExpense.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TruckExpense.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TruckRevenue\TruckRevenue.cs">
+      <DependentUpon>TruckRevenue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TruckRevenue\TruckRevenue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TruckRevenue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FileRpt\ContainerSize\ContainnerSizeList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContainnerSizeList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="FileRpt\ContainerSize\DataSet-ContainerSizeList.cs">
+      <DependentUpon>DataSet-ContainerSizeList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FileRpt\ContainerSize\DataSet-ContainerSizeList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet-ContainerSizeList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\CombinedRevenue\ExportPdf.cs" />
+    <Compile Include="Service\ContainerSize\ExportExcel.cs" />
+    <Compile Include="Service\ContainerSize\ExportPDF.cs" />
+    <Compile Include="Service\CustomerBalance\ExportPdf.cs" />
+    <Compile Include="Service\CustomerExpense\ExportExcel.cs" />
+    <Compile Include="Service\CustomerExpense\ExportPdf.cs" />
+    <Compile Include="Service\Expense\ExportExcel.cs" />
+    <Compile Include="Service\Order\ExportExcel.cs" />
+    <Compile Include="Service\TransportMaintenance\ExportPdf.cs" />
+    <Compile Include="Service\PartnerBalance\ExportPdf.cs" />
+    <Compile Include="Service\PartnerPayment\ExportPdf.cs" />
+    <Compile Include="Service\CustomerPayment\ExportPdf.cs" />
+    <Compile Include="Service\CustomerPricing\ExportPdf.cs" />
+    <Compile Include="Service\CustomerRevenue\ExportPdf.cs" />
+    <Compile Include="Service\CustomersExpense\ExportPdf.cs" />
+    <Compile Include="Service\Dispatch\ExportExcel.cs" />
+    <Compile Include="Service\Dispatch\ExportPdf.cs" />
+    <Compile Include="Service\DriverAllowance\ExportPdf.cs" />
+    <Compile Include="Service\DriverDispatch\ExportPdf.cs" />
+    <Compile Include="Service\DriverRevenue\ExportPdf.cs" />
+    <Compile Include="Service\Expense\ExportPdf.cs" />
+    <Compile Include="Service\FuelConsumptionDetail\ExportPdf.cs" />
+    <Compile Include="Service\FuelConsumption\ExportPdf.cs" />
+    <Compile Include="Service\Liabilities\ExportPdf.cs" />
+    <Compile Include="Service\Maintenance\ExportPdf.cs" />
+    <Compile Include="Service\OrderBalance\OrderBalance.cs" />
+    <Compile Include="Service\Order\ExportPdf.cs" />
+    <Compile Include="Service\SupplierExpense\ExportPdf.cs" />
+    <Compile Include="Service\PartnerExpense\ExportPdf.cs" />
+    <Compile Include="Service\PartnerCustomerExpense\ExportPdf.cs" />
+    <Compile Include="Service\TransportExpense\ExportExcel.cs" />
+    <Compile Include="Service\TransportExpense\ExportPdf.cs" />
+    <Compile Include="Service\Transport\ExportExcel.cs" />
+    <Compile Include="Service\TruckBalance\ExportPdf.cs" />
+    <Compile Include="Service\TruckExpense\ExportPdf.cs" />
+    <Compile Include="Service\TruckRevenue\ExportPdf.cs" />
+    <Compile Include="Service\UseFuel\ExportPdf.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Dataset\CombinedRevenue\CombinedRevenue.xsc">
+      <DependentUpon>CombinedRevenue.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CombinedRevenue\CombinedRevenue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CombinedRevenue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CombinedRevenue\CombinedRevenue.xss">
+      <DependentUpon>CombinedRevenue.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerBalance\CustomerBalance.xsc">
+      <DependentUpon>CustomerBalance.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerBalance\CustomerBalance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerBalance.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CustomerBalance\CustomerBalance.xss">
+      <DependentUpon>CustomerBalance.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerExpense\CustomerExpense.xsc">
+      <DependentUpon>CustomerExpense.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerExpense\CustomerExpense.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerExpense.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CustomerExpense\CustomerExpense.xss">
+      <DependentUpon>CustomerExpense.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerPayment\CustomerPayment.xsc">
+      <DependentUpon>CustomerPayment.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerPayment\CustomerPayment.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerPayment.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CustomerPayment\CustomerPayment.xss">
+      <DependentUpon>CustomerPayment.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerPayment\CustomerPaymentGeneral.xsc">
+      <DependentUpon>CustomerPaymentGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerPayment\CustomerPaymentGeneral.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerPaymentGeneral.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CustomerPayment\CustomerPaymentGeneral.xss">
+      <DependentUpon>CustomerPaymentGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerPricing\CustomerPricing.xsc">
+      <DependentUpon>CustomerPricing.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerPricing\CustomerPricing.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerPricing.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CustomerPricing\CustomerPricing.xss">
+      <DependentUpon>CustomerPricing.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerRevenue\CustomerRevenue.xsc">
+      <DependentUpon>CustomerRevenue.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerRevenue\CustomerRevenue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerRevenue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CustomerRevenue\CustomerRevenue.xss">
+      <DependentUpon>CustomerRevenue.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerRevenue\CustomerRevenueGeneral.xsc">
+      <DependentUpon>CustomerRevenueGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerRevenue\CustomerRevenueGeneral.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerRevenueGeneral.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CustomerRevenue\CustomerRevenueGeneral.xss">
+      <DependentUpon>CustomerRevenueGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomersExpense\CustomersExpense.xsc">
+      <DependentUpon>CustomersExpense.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomersExpense\CustomersExpense.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomersExpense.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CustomersExpense\CustomersExpense.xss">
+      <DependentUpon>CustomersExpense.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Dispatch\DispatchList.xsc">
+      <DependentUpon>DispatchList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Dispatch\DispatchList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DispatchList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\Dispatch\DispatchList.xss">
+      <DependentUpon>DispatchList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DriverAllowance\DriverAllowanceList.xsc">
+      <DependentUpon>DriverAllowanceList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DriverAllowance\DriverAllowanceList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DriverAllowanceList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DriverAllowance\DriverAllowanceList.xss">
+      <DependentUpon>DriverAllowanceList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DriverDispatch\DriverDispatch.xsc">
+      <DependentUpon>DriverDispatch.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DriverDispatch\DriverDispatch.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DriverDispatch.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DriverDispatch\DriverDispatch.xss">
+      <DependentUpon>DriverDispatch.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DriverRevenue\DriverRevenue.xsc">
+      <DependentUpon>DriverRevenue.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DriverRevenue\DriverRevenue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DriverRevenue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DriverRevenue\DriverRevenue.xss">
+      <DependentUpon>DriverRevenue.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Expense\ExpenseList.xsc">
+      <DependentUpon>ExpenseList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Expense\ExpenseList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExpenseList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\Expense\ExpenseList.xss">
+      <DependentUpon>ExpenseList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\FuelConsumption\FuelConsumption.xsc">
+      <DependentUpon>FuelConsumption.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\FuelConsumption\FuelConsumption.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FuelConsumption.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\FuelConsumption\FuelConsumption.xss">
+      <DependentUpon>FuelConsumption.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\FuelConsumption\FuelConsumptionDetail.xsc">
+      <DependentUpon>FuelConsumptionDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\FuelConsumption\FuelConsumptionDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FuelConsumptionDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\FuelConsumption\FuelConsumptionDetail.xss">
+      <DependentUpon>FuelConsumptionDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Liabilities\Liabilities.xsc">
+      <DependentUpon>Liabilities.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Liabilities\Liabilities.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Liabilities.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\Liabilities\Liabilities.xss">
+      <DependentUpon>Liabilities.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Liabilities\LiabilitiesDetail.xsc">
+      <DependentUpon>LiabilitiesDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Liabilities\LiabilitiesDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LiabilitiesDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\Liabilities\LiabilitiesDetail.xss">
+      <DependentUpon>LiabilitiesDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Liabilities\LiabilitiesPayment.xsc">
+      <DependentUpon>LiabilitiesPayment.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Liabilities\LiabilitiesPayment.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LiabilitiesPayment.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\Liabilities\LiabilitiesPayment.xss">
+      <DependentUpon>LiabilitiesPayment.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Maintenance\MaintenanceList.xsc">
+      <DependentUpon>MaintenanceList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Maintenance\MaintenanceList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaintenanceList1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset\Maintenance\MaintenanceList.xss">
+      <DependentUpon>MaintenanceList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Order\OrderList.xsc">
+      <DependentUpon>OrderList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Order\OrderList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\Order\OrderList.xss">
+      <DependentUpon>OrderList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerBalance\PartnerBalance.xsc">
+      <DependentUpon>PartnerBalance.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerBalance\PartnerBalance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartnerBalance.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\PartnerBalance\PartnerBalance.xss">
+      <DependentUpon>PartnerBalance.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerCustomer\PartnerCustomerExpenseList.xsc">
+      <DependentUpon>PartnerCustomerExpenseList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerCustomer\PartnerCustomerExpenseList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartnerCustomerExpenseList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\PartnerCustomer\PartnerCustomerExpenseList.xss">
+      <DependentUpon>PartnerCustomerExpenseList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerExpense\PartnerExpenseDetail.xsc">
+      <DependentUpon>PartnerExpenseDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerExpense\PartnerExpenseDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartnerExpenseDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\PartnerExpense\PartnerExpenseDetail.xss">
+      <DependentUpon>PartnerExpenseDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerExpense\PartnerExpenseList.xsc">
+      <DependentUpon>PartnerExpenseList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerExpense\PartnerExpenseList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartnerExpenseList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\PartnerExpense\PartnerExpenseList.xss">
+      <DependentUpon>PartnerExpenseList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerPayment\PartnerPaymentDetail.xsc">
+      <DependentUpon>PartnerPaymentDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerPayment\PartnerPaymentDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartnerPaymentDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\PartnerPayment\PartnerPaymentDetail.xss">
+      <DependentUpon>PartnerPaymentDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerPayment\PartnerPaymentGeneral.xsc">
+      <DependentUpon>PartnerPaymentGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PartnerPayment\PartnerPaymentGeneral.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartnerPaymentGeneral.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\PartnerPayment\PartnerPaymentGeneral.xss">
+      <DependentUpon>PartnerPaymentGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\SupplierExpense\SupplierExpenseList.xsc">
+      <DependentUpon>SupplierExpenseList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\SupplierExpense\SupplierExpenseList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SupplierExpenseList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\SupplierExpense\SupplierExpenseList.xss">
+      <DependentUpon>SupplierExpenseList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TransportExpense\TransportExpense.xsc">
+      <DependentUpon>TransportExpense.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TransportExpense\TransportExpense.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransportExpense.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\TransportExpense\TransportExpense.xss">
+      <DependentUpon>TransportExpense.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TransportExpense\TransportExpenseList.xsc">
+      <DependentUpon>TransportExpenseList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TransportExpense\TransportExpenseList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransportExpenseList.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset\TransportExpense\TransportExpenseList.xss">
+      <DependentUpon>TransportExpenseList.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TruckBalance\TruckBalance.xsc">
+      <DependentUpon>TruckBalance.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TruckBalance\TruckBalance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TruckBalance.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\TruckBalance\TruckBalance.xss">
+      <DependentUpon>TruckBalance.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TruckExpense\TruckExpense.xsc">
+      <DependentUpon>TruckExpense.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TruckExpense\TruckExpense.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TruckExpense.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\TruckExpense\TruckExpense.xss">
+      <DependentUpon>TruckExpense.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TruckRevenue\TruckRevenue.xsc">
+      <DependentUpon>TruckRevenue.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TruckRevenue\TruckRevenue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TruckRevenue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\TruckRevenue\TruckRevenue.xss">
+      <DependentUpon>TruckRevenue.xsd</DependentUpon>
+    </None>
+    <None Include="FileRpt\ContainerSize\DataSet-ContainerSizeList.xsc">
+      <DependentUpon>DataSet-ContainerSizeList.xsd</DependentUpon>
+    </None>
+    <None Include="FileRpt\ContainerSize\DataSet-ContainerSizeList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet-ContainerSizeList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FileRpt\ContainerSize\DataSet-ContainerSizeList.xss">
+      <DependentUpon>DataSet-ContainerSizeList.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FileRpt\ContainerSize\ContainnerSizeList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ContainnerSizeList1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Root\Root.csproj">
+      <Project>{23167e13-5f3b-460f-a429-3552c0d67fb8}</Project>
+      <Name>Root</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Website\Website.csproj">
+      <Project>{1d5667c8-cbdf-4a06-8ce8-4c11ffde0e9c}</Project>
+      <Name>Website</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

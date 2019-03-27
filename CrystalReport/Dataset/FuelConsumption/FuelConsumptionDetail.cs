@@ -1,0 +1,3 @@
+﻿namespace CrystalReport.Dataset.FuelConsumption
+{
+}

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TruckBalance" targetNamespace="http://tempuri.org/TruckBalance.xsd" xmlns:mstns="http://tempuri.org/TruckBalance.xsd" xmlns="http://tempuri.org/TruckBalance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TruckBalance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TruckBalance" msprop:Generator_UserDSName="TruckBalance">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TruckBalance" msprop:Generator_TableClassName="TruckBalanceDataTable" msprop:Generator_TableVarName="tableTruckBalance" msprop:Generator_TablePropName="_TruckBalance" msprop:Generator_RowDeletingName="TruckBalanceRowDeleting" msprop:Generator_RowChangingName="TruckBalanceRowChanging" msprop:Generator_RowEvHandlerName="TruckBalanceRowChangeEventHandler" msprop:Generator_RowDeletedName="TruckBalanceRowDeleted" msprop:Generator_UserTableName="TruckBalance" msprop:Generator_RowChangedName="TruckBalanceRowChanged" msprop:Generator_RowEvArgName="TruckBalanceRowChangeEvent" msprop:Generator_RowClassName="TruckBalanceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegisteredNo" msprop:Generator_ColumnVarNameInTable="columnRegisteredNo" msprop:Generator_ColumnPropNameInRow="RegisteredNo" msprop:Generator_ColumnPropNameInTable="RegisteredNoColumn" msprop:Generator_UserColumnName="RegisteredNo" type="xs:string" minOccurs="0" />
+              <xs:element name="IncomN" msprop:Generator_ColumnVarNameInTable="columnIncomN" msprop:Generator_ColumnPropNameInRow="IncomN" msprop:Generator_ColumnPropNameInTable="IncomNColumn" msprop:Generator_UserColumnName="IncomN" type="xs:string" minOccurs="0" />
+              <xs:element name="IncomAmount" msprop:Generator_ColumnVarNameInTable="columnIncomAmount" msprop:Generator_ColumnPropNameInRow="IncomAmount" msprop:Generator_ColumnPropNameInTable="IncomAmountColumn" msprop:Generator_UserColumnName="IncomAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="ExpenseN" msprop:Generator_ColumnVarNameInTable="columnExpenseN" msprop:Generator_ColumnPropNameInRow="ExpenseN" msprop:Generator_ColumnPropNameInTable="ExpenseNColumn" msprop:Generator_UserColumnName="ExpenseN" type="xs:string" minOccurs="0" />
+              <xs:element name="ExpenseAmount" msprop:Generator_ColumnVarNameInTable="columnExpenseAmount" msprop:Generator_ColumnPropNameInRow="ExpenseAmount" msprop:Generator_ColumnPropNameInTable="ExpenseAmountColumn" msprop:Generator_UserColumnName="ExpenseAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="BenefitN" msprop:Generator_ColumnVarNameInTable="columnBenefitN" msprop:Generator_ColumnPropNameInRow="BenefitN" msprop:Generator_ColumnPropNameInTable="BenefitNColumn" msprop:Generator_UserColumnName="BenefitN" type="xs:string" minOccurs="0" />
+              <xs:element name="BenefitAmount" msprop:Generator_ColumnVarNameInTable="columnBenefitAmount" msprop:Generator_ColumnPropNameInRow="BenefitAmount" msprop:Generator_ColumnPropNameInTable="BenefitAmountColumn" msprop:Generator_UserColumnName="BenefitAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="IsHeader" msprop:Generator_ColumnVarNameInTable="columnIsHeader" msprop:Generator_ColumnPropNameInRow="IsHeader" msprop:Generator_ColumnPropNameInTable="IsHeaderColumn" msprop:Generator_UserColumnName="IsHeader" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

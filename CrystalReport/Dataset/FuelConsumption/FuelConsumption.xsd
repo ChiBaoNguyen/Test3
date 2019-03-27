@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FuelConsumption" targetNamespace="http://tempuri.org/FuelConsumption.xsd" xmlns:mstns="http://tempuri.org/FuelConsumption.xsd" xmlns="http://tempuri.org/FuelConsumption.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FuelConsumption" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FuelConsumption" msprop:Generator_UserDSName="FuelConsumption">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FuelConsumption" msprop:Generator_TableClassName="FuelConsumptionDataTable" msprop:Generator_TableVarName="tableFuelConsumption" msprop:Generator_TablePropName="_FuelConsumption" msprop:Generator_RowDeletingName="FuelConsumptionRowDeleting" msprop:Generator_RowChangingName="FuelConsumptionRowChanging" msprop:Generator_RowEvHandlerName="FuelConsumptionRowChangeEventHandler" msprop:Generator_RowDeletedName="FuelConsumptionRowDeleted" msprop:Generator_UserTableName="FuelConsumption" msprop:Generator_RowChangedName="FuelConsumptionRowChanged" msprop:Generator_RowEvArgName="FuelConsumptionRowChangeEvent" msprop:Generator_RowClassName="FuelConsumptionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="ContainerNumber" msprop:Generator_ColumnVarNameInTable="columnContainerNumber" msprop:Generator_ColumnPropNameInRow="ContainerNumber" msprop:Generator_ColumnPropNameInTable="ContainerNumberColumn" msprop:Generator_UserColumnName="ContainerNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="EstimatedDistance" msprop:Generator_ColumnVarNameInTable="columnEstimatedDistance" msprop:Generator_ColumnPropNameInRow="EstimatedDistance" msprop:Generator_ColumnPropNameInTable="EstimatedDistanceColumn" msprop:Generator_UserColumnName="EstimatedDistance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EstimatedFuel" msprop:Generator_ColumnVarNameInTable="columnEstimatedFuel" msprop:Generator_ColumnPropNameInRow="EstimatedFuel" msprop:Generator_ColumnPropNameInTable="EstimatedFuelColumn" msprop:Generator_UserColumnName="EstimatedFuel" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ActualDistance" msprop:Generator_ColumnVarNameInTable="columnActualDistance" msprop:Generator_ColumnPropNameInRow="ActualDistance" msprop:Generator_ColumnPropNameInTable="ActualDistanceColumn" msprop:Generator_UserColumnName="ActualDistance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ActualFuel" msprop:Generator_ColumnVarNameInTable="columnActualFuel" msprop:Generator_ColumnPropNameInRow="ActualFuel" msprop:Generator_ColumnPropNameInTable="ActualFuelColumn" msprop:Generator_UserColumnName="ActualFuel" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

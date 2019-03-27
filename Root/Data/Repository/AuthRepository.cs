@@ -1,0 +1,128 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Root.AuthenticationModels;
+using Root.Models;
+
+namespace Root.Data.Repository
+{
+	public class AuthRepository : IDisposable
+	{
+		private SGTSVNDBContext _ctx;
+
+		private UserManager<User> _userManager;
+
+		public AuthRepository()
+		{
+			_ctx = new SGTSVNDBContext();
+			_userManager = new UserManager<User>(new UserStore<User>(_ctx));
+		}
+
+		public IList<string> GetRoles(string id)
+		{
+			return _userManager.GetRoles(id);
+		}
+		public async Task<IdentityResult> RegisterUser(UserModel userModel)
+		{
+			User user = new User
+			{
+				UserName = userModel.UserName
+			};
+
+			var result = await _userManager.CreateAsync(user, userModel.Password);
+
+			return result;
+		}
+
+		public async Task<User> FindUser(string userName, string password)
+		{
+			User user = await _userManager.FindAsync(userName, password);
+
+			return user;
+		}
+
+		public Client FindClient(string clientId)
+		{
+			var client = _ctx.Clients.Find(clientId);
+
+			return client;
+		}
+
+		public async Task<bool> AddRefreshToken(RefreshToken token)
+		{
+
+			var existingToken = _ctx.RefreshTokens.SingleOrDefault(r => r.Subject == token.Subject && r.ClientId == token.ClientId);
+
+			if (existingToken != null)
+			{
+				var result = await RemoveRefreshToken(existingToken);
+			}
+
+			_ctx.RefreshTokens.Add(token);
+
+			return await _ctx.SaveChangesAsync() > 0;
+		}
+
+		public async Task<bool> RemoveRefreshToken(string refreshTokenId)
+		{
+			var refreshToken = await _ctx.RefreshTokens.FindAsync(refreshTokenId);
+
+			if (refreshToken != null)
+			{
+				_ctx.RefreshTokens.Remove(refreshToken);
+				return await _ctx.SaveChangesAsync() > 0;
+			}
+
+			return false;
+		}
+
+		public async Task<bool> RemoveRefreshToken(RefreshToken refreshToken)
+		{
+			_ctx.RefreshTokens.Remove(refreshToken);
+			return await _ctx.SaveChangesAsync() > 0;
+		}
+
+		public async Task<RefreshToken> FindRefreshToken(string refreshTokenId)
+		{
+			var refreshToken = await _ctx.RefreshTokens.FindAsync(refreshTokenId);
+
+			return refreshToken;
+		}
+
+		public List<RefreshToken> GetAllRefreshTokens()
+		{
+			return _ctx.RefreshTokens.ToList();
+		}
+
+		public async Task<User> FindAsync(UserLoginInfo loginInfo)
+		{
+			User user = await _userManager.FindAsync(loginInfo);
+
+			return user;
+		}
+
+		public async Task<IdentityResult> CreateAsync(User user)
+		{
+			var result = await _userManager.CreateAsync(user);
+
+			return result;
+		}
+
+		public async Task<IdentityResult> AddLoginAsync(string userId, UserLoginInfo login)
+		{
+			var result = await _userManager.AddLoginAsync(userId, login);
+
+			return result;
+		}
+
+		public void Dispose()
+		{
+			_ctx.Dispose();
+			_userManager.Dispose();
+
+		}
+	}
+}

@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A27E1274-33E6-4DB2-8C35-4689FD24F601}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Root</RootNamespace>
+    <AssemblyName>Root</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthenticationModels\ApplicationTypes.cs" />
+    <Compile Include="AuthenticationModels\UserModel.cs" />
+    <Compile Include="Data\Infrastructure\DatabaseFactory.cs" />
+    <Compile Include="Data\Infrastructure\Disposable.cs" />
+    <Compile Include="Data\Infrastructure\IDatabaseFactory.cs" />
+    <Compile Include="Data\Infrastructure\IRepository.cs" />
+    <Compile Include="Data\Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Data\Infrastructure\Page.cs" />
+    <Compile Include="Data\Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Data\Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Data\Repository\AllowanceDetailRepository.cs" />
+    <Compile Include="Data\Repository\AuthRepository.cs" />
+    <Compile Include="Data\Repository\BasicRepository.cs" />
+    <Compile Include="Data\Repository\CalculateDriverAllowanceRepository.cs" />
+    <Compile Include="Data\Repository\ChatMessageRepository.cs" />
+    <Compile Include="Data\Repository\CommodityRepository.cs" />
+    <Compile Include="Data\Repository\CompanyExpenseRepository.cs" />
+    <Compile Include="Data\Repository\ContainerRepository.cs" />
+    <Compile Include="Data\Repository\ContainerSizeRepository.cs" />
+    <Compile Include="Data\Repository\ContainerTypeRepository.cs" />
+    <Compile Include="Data\Repository\ContractPartnerPatternRepository.cs" />
+    <Compile Include="Data\Repository\ContractTariffPatternRepository.cs" />
+    <Compile Include="Data\Repository\CustomerBalanceRepository.cs" />
+    <Compile Include="Data\Repository\CustomerGrossProfitRepository.cs" />
+    <Compile Include="Data\Repository\CustomerPaymentRepository.cs" />
+    <Compile Include="Data\Repository\CustomerPricingDetailRepository.cs" />
+    <Compile Include="Data\Repository\CustomerPricingLocationRepository.cs" />
+    <Compile Include="Data\Repository\CustomerPricingRepository.cs" />
+    <Compile Include="Data\Repository\CustomerProfitMarkupRepository.cs" />
+    <Compile Include="Data\Repository\CustomerRepository.cs" />
+    <Compile Include="Data\Repository\CustomerSettlementRepository.cs" />
+    <Compile Include="Data\Repository\DepartmentRepository.cs" />
+    <Compile Include="Data\Repository\DispatchRepository.cs" />
+    <Compile Include="Data\Repository\DriverAllowanceRepository.cs" />
+    <Compile Include="Data\Repository\DriverLicenseRepository.cs" />
+    <Compile Include="Data\Repository\DriverLicenseUpdateRepository.cs" />
+    <Compile Include="Data\Repository\DriverRepository.cs" />
+    <Compile Include="Data\Repository\EmployeeRepository.cs" />
+    <Compile Include="Data\Repository\ExpenseCategoryRepository.cs" />
+    <Compile Include="Data\Repository\ExpenseDetailRepository.cs" />
+    <Compile Include="Data\Repository\ExpenseRepository.cs" />
+    <Compile Include="Data\Repository\FeaturesRepository.cs" />
+    <Compile Include="Data\Repository\FixedExpenseRepository.cs" />
+    <Compile Include="Data\Repository\FuelConsumptionDetailRepository.cs" />
+    <Compile Include="Data\Repository\FuelConsumptionRepository.cs" />
+    <Compile Include="Data\Repository\GpsLocationRepository.cs" />
+    <Compile Include="Data\Repository\InspectionDetailRepository.cs" />
+    <Compile Include="Data\Repository\InspectionPlanDetailRepository.cs" />
+    <Compile Include="Data\Repository\InspectionRepository.cs" />
+    <Compile Include="Data\Repository\LanguageRepository.cs" />
+    <Compile Include="Data\Repository\LiabilitiesItemRepository.cs" />
+    <Compile Include="Data\Repository\LiabilitiesRepository.cs" />
+    <Compile Include="Data\Repository\LicenseRepository.cs" />
+    <Compile Include="Data\Repository\LocationDetailRepository.cs" />
+    <Compile Include="Data\Repository\LocationRepository.cs" />
+    <Compile Include="Data\Repository\MaintenanceDetailRepository.cs" />
+    <Compile Include="Data\Repository\MaintenanceItemDetailRepository.cs" />
+    <Compile Include="Data\Repository\MaintenanceItemRepository.cs" />
+    <Compile Include="Data\Repository\MaintenancePlanDetailRepository.cs" />
+    <Compile Include="Data\Repository\ModelRepository.cs" />
+    <Compile Include="Data\Repository\OperationRepository.cs" />
+    <Compile Include="Data\Repository\OrderPatternRepository.cs" />
+    <Compile Include="Data\Repository\OrderRepository.cs" />
+    <Compile Include="Data\Repository\PartnerBalanceRepository.cs" />
+    <Compile Include="Data\Repository\PartnerContractTariffPatternRepository.cs" />
+    <Compile Include="Data\Repository\PartnerPaymentRepository.cs" />
+    <Compile Include="Data\Repository\PartnerRepository.cs" />
+    <Compile Include="Data\Repository\PartnerSettlementRepository.cs" />
+    <Compile Include="Data\Repository\RoleFeaturesRepository.cs" />
+    <Compile Include="Data\Repository\RoleRepository.cs" />
+    <Compile Include="Data\Repository\RouteDetailRepository.cs" />
+    <Compile Include="Data\Repository\RouteRepository.cs" />
+    <Compile Include="Data\Repository\ScreenRepository.cs" />
+    <Compile Include="Data\Repository\ShipperRepository.cs" />
+    <Compile Include="Data\Repository\ShippingCompanyRepository.cs" />
+    <Compile Include="Data\Repository\SupplierBalanceRepository.cs" />
+    <Compile Include="Data\Repository\SupplierPaymentRepository.cs" />
+    <Compile Include="Data\Repository\SupplierRepository.cs" />
+    <Compile Include="Data\Repository\SupplierSettlementRepository.cs" />
+    <Compile Include="Data\Repository\SurchargeDetailRepository.cs" />
+    <Compile Include="Data\Repository\SurchargeRepository.cs" />
+    <Compile Include="Data\Repository\TextResourceRepository.cs" />
+    <Compile Include="Data\Repository\TraillerRepository.cs" />
+    <Compile Include="Data\Repository\TransportDistanceRepository.cs" />
+    <Compile Include="Data\Repository\TruckExpenseRepository.cs" />
+    <Compile Include="Data\Repository\TruckRepository.cs" />
+    <Compile Include="Data\Repository\UploadImageMobileRepository.cs" />
+    <Compile Include="Data\Repository\UserRepository.cs" />
+    <Compile Include="Data\Repository\UserRolesRepository.cs" />
+    <Compile Include="Data\Repository\VesselRepository.cs" />
+    <Compile Include="Data\SGTSVNDBContext.cs" />
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Allowance_D.cs" />
+    <Compile Include="Models\Authorization\AuthorizedRoleFeature.cs" />
+    <Compile Include="Models\Basic_S.cs" />
+    <Compile Include="Models\CalculateDriverAllowance_M.cs" />
+    <Compile Include="Models\Calendar\CalendarPlanItem.cs" />
+    <Compile Include="Models\Calendar\CalendarPlanItemForCounting.cs" />
+    <Compile Include="Models\ChatMessage.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\Commodity_M.cs" />
+    <Compile Include="Models\CompanyExpense_D.cs" />
+    <Compile Include="Models\ContainerSize_M.cs" />
+    <Compile Include="Models\ContainerType_M.cs" />
+    <Compile Include="Models\ContractPartnerPattern_M.cs" />
+    <Compile Include="Models\ContractTariffPattern_M.cs" />
+    <Compile Include="Models\CustomerBalance_D.cs" />
+    <Compile Include="Models\CustomerGrossProfit_M.cs" />
+    <Compile Include="Models\CustomerPayment_D.cs" />
+    <Compile Include="Models\CustomerPricingLocation_D.cs" />
+    <Compile Include="Models\CustomerPricing_D.cs" />
+    <Compile Include="Models\CustomerPricing_H.cs" />
+    <Compile Include="Models\CustomerSettlement_M.cs" />
+    <Compile Include="Models\Customer_M.cs" />
+    <Compile Include="Models\Department_M.cs" />
+    <Compile Include="Models\Dispatch_D.cs" />
+    <Compile Include="Models\DriverAllowance_M.cs" />
+    <Compile Include="Models\DriverLicenseUpdate_D.cs" />
+    <Compile Include="Models\DriverLicense_M.cs" />
+    <Compile Include="Models\Driver_M.cs" />
+    <Compile Include="Models\Employee_M.cs" />
+    <Compile Include="Models\ExpenseCategory_M.cs" />
+    <Compile Include="Models\Expense_D.cs" />
+    <Compile Include="Models\Expense_M.cs" />
+    <Compile Include="Models\Feature_M.cs" />
+    <Compile Include="Models\FixedExpense_D.cs" />
+    <Compile Include="Models\FuelConsumption_D.cs" />
+    <Compile Include="Models\FuelConsumption_M.cs" />
+    <Compile Include="Models\GpsLocation_D.cs" />
+    <Compile Include="Models\InspectionPlan_D.cs" />
+    <Compile Include="Models\Inspection_D.cs" />
+    <Compile Include="Models\Inspection_M.cs" />
+    <Compile Include="Models\Language_M.cs" />
+    <Compile Include="Models\LiabilitiesItem_D.cs" />
+    <Compile Include="Models\Liabilities_D.cs" />
+    <Compile Include="Models\License_M.cs" />
+    <Compile Include="Models\LocationDetail_M.cs" />
+    <Compile Include="Models\Location_M.cs" />
+    <Compile Include="Models\MaintenanceItem_D.cs" />
+    <Compile Include="Models\MaintenanceItem_M.cs" />
+    <Compile Include="Models\MaintenancePlan_D.cs" />
+    <Compile Include="Models\Maintenance_D.cs" />
+    <Compile Include="Models\Mapping\Allowance_DMap.cs" />
+    <Compile Include="Models\Mapping\Basic_SMap.cs" />
+    <Compile Include="Models\Mapping\CalculateDriverAllowance_MMap.cs" />
+    <Compile Include="Models\Mapping\ChatMessageMap.cs" />
+    <Compile Include="Models\Mapping\Client_Map.cs" />
+    <Compile Include="Models\Mapping\Commodity_MMap.cs" />
+    <Compile Include="Models\Mapping\CompanyExpense_DMap.cs" />
+    <Compile Include="Models\Mapping\ContainerSize_MMap.cs" />
+    <Compile Include="Models\Mapping\ContainerType_MMap.cs" />
+    <Compile Include="Models\Mapping\ContractPartnerPattern_MMap.cs" />
+    <Compile Include="Models\Mapping\ContractTariffPattern_MMap.cs" />
+    <Compile Include="Models\Mapping\CustomerBalance_DMap.cs" />
+    <Compile Include="Models\Mapping\CustomerGrossProfit_MMap.cs" />
+    <Compile Include="Models\Mapping\CustomerPayment_DMap.cs" />
+    <Compile Include="Models\Mapping\CustomerPricingLocation_DMap.cs" />
+    <Compile Include="Models\Mapping\CustomerPricing_DMap.cs" />
+    <Compile Include="Models\Mapping\CustomerPricing_HMap.cs" />
+    <Compile Include="Models\Mapping\CustomerSettlement_MMap.cs" />
+    <Compile Include="Models\Mapping\Customer_MMap.cs" />
+    <Compile Include="Models\Mapping\Department_MMap.cs" />
+    <Compile Include="Models\Mapping\Dispatch_DMap.cs" />
+    <Compile Include="Models\Mapping\DriverAllowance_MMap.cs" />
+    <Compile Include="Models\Mapping\DriverLicenseUpdate_DMap.cs" />
+    <Compile Include="Models\Mapping\DriverLicense_MMap.cs" />
+    <Compile Include="Models\Mapping\Driver_MMap.cs" />
+    <Compile Include="Models\Mapping\Employee_MMap.cs" />
+    <Compile Include="Models\Mapping\ExpenseCategory_MMap.cs" />
+    <Compile Include="Models\Mapping\Expense_DMap.cs" />
+    <Compile Include="Models\Mapping\Expense_MMap.cs" />
+    <Compile Include="Models\Mapping\Feature_MMap.cs" />
+    <Compile Include="Models\Mapping\FixedExpense_DMap.cs" />
+    <Compile Include="Models\Mapping\FuelConsumption_DMap.cs" />
+    <Compile Include="Models\Mapping\FuelConsumption_MMap.cs" />
+    <Compile Include="Models\Mapping\GpsLocation_DMap.cs" />
+    <Compile Include="Models\Mapping\InspectionPlan_DMap.cs" />
+    <Compile Include="Models\Mapping\Inspection_DMap.cs" />
+    <Compile Include="Models\Mapping\Inspection_MMap.cs" />
+    <Compile Include="Models\Mapping\Language_MMap.cs" />
+    <Compile Include="Models\Mapping\LiabilitiesItem_DMap.cs" />
+    <Compile Include="Models\Mapping\Liabilities_DMap.cs" />
+    <Compile Include="Models\Mapping\License_MMap.cs" />
+    <Compile Include="Models\Mapping\LocationDetail_MMap.cs" />
+    <Compile Include="Models\Mapping\Location_MMap.cs" />
+    <Compile Include="Models\Mapping\MaintenanceItem_DMap.cs" />
+    <Compile Include="Models\Mapping\MaintenanceItem_MMap.cs" />
+    <Compile Include="Models\Mapping\MaintenancePlan_DMap.cs" />
+    <Compile Include="Models\Mapping\Maintenance_DMap.cs" />
+    <Compile Include="Models\Mapping\Model_MMap.cs" />
+    <Compile Include="Models\Mapping\Operation_MMap.cs" />
+    <Compile Include="Models\Mapping\OrderPattern_MMap.cs" />
+    <Compile Include="Models\Mapping\Order_DMap.cs" />
+    <Compile Include="Models\Mapping\Order_HMap.cs" />
+    <Compile Include="Models\Mapping\PartnerBalance_DMap.cs" />
+    <Compile Include="Models\Mapping\PartnerContractTariffPattern_MMap.cs" />
+    <Compile Include="Models\Mapping\PartnerPayment_DMap.cs" />
+    <Compile Include="Models\Mapping\PartnerSettlement_MMap.cs" />
+    <Compile Include="Models\Mapping\Partner_MMap.cs" />
+    <Compile Include="Models\Mapping\RefreshToken_Map.cs" />
+    <Compile Include="Models\Mapping\RoleFeatures_Map.cs" />
+    <Compile Include="Models\Mapping\Route_DMap.cs" />
+    <Compile Include="Models\Mapping\Route_HMap.cs" />
+    <Compile Include="Models\Mapping\Screen_MMap.cs" />
+    <Compile Include="Models\Mapping\Shipper_MMap.cs" />
+    <Compile Include="Models\Mapping\ShippingCompany_MMap.cs" />
+    <Compile Include="Models\Mapping\SupplierBalance_DMap.cs" />
+    <Compile Include="Models\Mapping\SupplierPayment_DMap.cs" />
+    <Compile Include="Models\Mapping\SupplierSettlement_MMap.cs" />
+    <Compile Include="Models\Mapping\Supplier_MMap.cs" />
+    <Compile Include="Models\Mapping\Surcharge_DMap.cs" />
+    <Compile Include="Models\Mapping\TextResource_DMap.cs" />
+    <Compile Include="Models\Mapping\Trailer_MMap.cs" />
+    <Compile Include="Models\Mapping\TransportDistance_MMap.cs" />
+    <Compile Include="Models\Mapping\TruckExpense_DMap.cs" />
+    <Compile Include="Models\Mapping\Truck_MMap.cs" />
+    <Compile Include="Models\Mapping\UploadImageMobile_Map.cs" />
+    <Compile Include="Models\Mapping\Vessel_MMap.cs" />
+    <Compile Include="Models\Model_M.cs" />
+    <Compile Include="Models\Operation_M.cs" />
+    <Compile Include="Models\OrderPattern_M.cs" />
+    <Compile Include="Models\Order_D.cs" />
+    <Compile Include="Models\Order_H.cs" />
+    <Compile Include="Models\PartnerBalance_D.cs" />
+    <Compile Include="Models\PartnerContractTariffPattern_M.cs" />
+    <Compile Include="Models\PartnerPayment_D.cs" />
+    <Compile Include="Models\PartnerSettlement_M.cs" />
+    <Compile Include="Models\Partner_M.cs" />
+    <Compile Include="Models\RefreshToken.cs" />
+    <Compile Include="Models\RoleFeatures.cs" />
+    <Compile Include="Models\Route_D.cs" />
+    <Compile Include="Models\Route_H.cs" />
+    <Compile Include="Models\Screen_M.cs" />
+    <Compile Include="Models\Shipper_M.cs" />
+    <Compile Include="Models\ShippingCompany_M.cs" />
+    <Compile Include="Models\SupplierBalance_D.cs" />
+    <Compile Include="Models\SupplierPayment_D.cs" />
+    <Compile Include="Models\SupplierSettlement_M.cs" />
+    <Compile Include="Models\Supplier_M.cs" />
+    <Compile Include="Models\Surcharge_D.cs" />
+    <Compile Include="Models\TextResource_D.cs" />
+    <Compile Include="Models\Trailer_M.cs" />
+    <Compile Include="Models\TransportDistance_M.cs" />
+    <Compile Include="Models\TruckExpense_D.cs" />
+    <Compile Include="Models\Truck_M.cs" />
+    <Compile Include="Models\UploadImage.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Vessel_M.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

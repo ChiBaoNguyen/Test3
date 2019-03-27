@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22F1D2CF-94AF-4EDA-9322-7EFFCD23D7AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Website</RootNamespace>
+    <AssemblyName>Website</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum\CommonEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\LicenseValidation.cs" />
+    <Compile Include="Utilities\Utilities.cs" />
+    <Compile Include="ViewModels\Allowance\AllowanceDetailViewModel.cs" />
+    <Compile Include="ViewModels\Allowance\TransportConfirmAllowanceViewModel.cs" />
+    <Compile Include="ViewModels\BackupRestoreDB\RestoreDatatable.cs" />
+    <Compile Include="ViewModels\BackupRestoreDB\RestoreDataViewModel.cs" />
+    <Compile Include="ViewModels\Basic\AllowanceViewModel.cs" />
+    <Compile Include="ViewModels\Basic\BasicViewModel.cs" />
+    <Compile Include="ViewModels\Basic\ExpenseBasicViewModel.cs" />
+    <Compile Include="ViewModels\Basic\PartnerCostViewModel.cs" />
+    <Compile Include="ViewModels\Basic\PartnerSurchargeViewModel.cs" />
+    <Compile Include="ViewModels\Basic\SurchargeViewModel.cs" />
+    <Compile Include="ViewModels\CalculateDriverAllowance\CalculateDriverAllowanceDatatable.cs" />
+    <Compile Include="ViewModels\CalculateDriverAllowance\CalculateDriverAllowanceViewModel.cs" />
+    <Compile Include="ViewModels\ChatMessage\ChatMessagePayload.cs" />
+    <Compile Include="ViewModels\ChatMessage\ChatMessageViewModel.cs" />
+    <Compile Include="ViewModels\ChatMessage\DriverMessageList.cs" />
+    <Compile Include="ViewModels\Commodity\CommodityDatatables.cs" />
+    <Compile Include="ViewModels\Commodity\CommodityStatusViewModel.cs" />
+    <Compile Include="ViewModels\Common\ResponseStatus.cs" />
+    <Compile Include="ViewModels\CompanyExpense\CompanyExpenseDatatable.cs" />
+    <Compile Include="ViewModels\CompanyExpense\CompanyExpenseViewModel.cs" />
+    <Compile Include="ViewModels\Container\ContainerDetailDatatable.cs" />
+    <Compile Include="ViewModels\Container\ContainerDetailViewModel.cs" />
+    <Compile Include="ViewModels\Container\ContainerSizeDatatables.cs" />
+    <Compile Include="ViewModels\Container\ContainerSizeStatusViewModel.cs" />
+    <Compile Include="ViewModels\Container\ContainerSizeViewModel.cs" />
+    <Compile Include="ViewModels\Container\ContainerTypeDatatables.cs" />
+    <Compile Include="ViewModels\Container\ContainerTypeStatusViewModel.cs" />
+    <Compile Include="ViewModels\Container\ContainerTypeViewModel.cs" />
+    <Compile Include="ViewModels\Container\ContainerViewModel.cs" />
+    <Compile Include="ViewModels\Container\TransportConfirmContainerViewModel.cs" />
+    <Compile Include="ViewModels\ContractPartnerPattern\ContractPartnerPatternDatatable.cs" />
+    <Compile Include="ViewModels\ContractPartnerPattern\ContractPartnerPatternViewModel.cs" />
+    <Compile Include="ViewModels\ContractPartnerPattern\ContractPartnerViewModel.cs" />
+    <Compile Include="ViewModels\ContractPartnerPattern\PartnerPatternViewModel.cs" />
+    <Compile Include="ViewModels\CustomerPayment\CustomerPaymentDatatable.cs" />
+    <Compile Include="ViewModels\CustomerPayment\CustomerPaymentViewModel.cs" />
+    <Compile Include="ViewModels\CustomerPricing\CustomerPricingDataTable.cs" />
+    <Compile Include="ViewModels\CustomerPricing\CustomerPricingDetailViewModel.cs" />
+    <Compile Include="ViewModels\CustomerPricing\CustomerPricingSearchParams.cs" />
+    <Compile Include="ViewModels\CustomerPricing\CustomerPricingViewModel.cs" />
+    <Compile Include="ViewModels\CustomerPricing\SuggestedExpenseList.cs" />
+    <Compile Include="ViewModels\CustomerPricing\SuggestedRoute.cs" />
+    <Compile Include="ViewModels\CustomerPricing\SuggestedRouteList.cs" />
+    <Compile Include="ViewModels\Customer\CustomerDatatables.cs" />
+    <Compile Include="ViewModels\Customer\CustomerGrossProfitViewModel.cs" />
+    <Compile Include="ViewModels\Customer\CustomerInvoiceViewModel.cs" />
+    <Compile Include="ViewModels\Customer\CustomerListViewModel.cs" />
+    <Compile Include="ViewModels\Customer\CustomerSettlementViewModel.cs" />
+    <Compile Include="ViewModels\Customer\CustomerViewModel.cs" />
+    <Compile Include="ViewModels\Customer\InvoiceViewModel.cs" />
+    <Compile Include="ViewModels\Department\DepartmentDatatables.cs" />
+    <Compile Include="ViewModels\Department\DepartmentStatusViewModel.cs" />
+    <Compile Include="ViewModels\Department\DepartmentViewModel.cs" />
+    <Compile Include="ViewModels\Dispatch\DispatchData.cs" />
+    <Compile Include="ViewModels\Dispatch\DispatchDataRow.cs" />
+    <Compile Include="ViewModels\Dispatch\DispatchDatatable.cs" />
+    <Compile Include="ViewModels\Dispatch\DispatchDetailViewModel.cs" />
+    <Compile Include="ViewModels\Dispatch\DispatchListReport.cs" />
+    <Compile Include="ViewModels\Dispatch\DispatchReportParam.cs" />
+    <Compile Include="ViewModels\Dispatch\DispatchViewModel.cs" />
+    <Compile Include="ViewModels\Dispatch\DriverDispatchReportParam.cs" />
+    <Compile Include="ViewModels\Dispatch\DriverDispatchViewModel.cs" />
+    <Compile Include="ViewModels\Dispatch\TransportConfirmDispatchViewModel.cs" />
+    <Compile Include="ViewModels\Dispatch\TruckListViewModel.cs" />
+    <Compile Include="ViewModels\DriverAllowance\AllowanceViewModel.cs" />
+    <Compile Include="ViewModels\DriverAllowance\DriverAllowanceDatatable.cs" />
+    <Compile Include="ViewModels\DriverAllowance\DriverAllowanceListReport.cs" />
+    <Compile Include="ViewModels\DriverAllowance\DriverAllowancePatternViewModel.cs" />
+    <Compile Include="ViewModels\DriverAllowance\DriverAllowanceReport.cs" />
+    <Compile Include="ViewModels\DriverAllowance\DriverAllowanceReportParam.cs" />
+    <Compile Include="ViewModels\DriverAllowance\DriverAllowanceTableReport.cs" />
+    <Compile Include="ViewModels\DriverAllowance\DriverAllowanceViewModel.cs" />
+    <Compile Include="ViewModels\DriverLicenseUpdate\DriverLicenseUpdateViewModel.cs" />
+    <Compile Include="ViewModels\DriverLicense\DriverLicenseViewModel.cs" />
+    <Compile Include="ViewModels\Driver\DriverDatatables.cs" />
+    <Compile Include="ViewModels\Driver\DriverStatusViewModel.cs" />
+    <Compile Include="ViewModels\Driver\DriverViewModel.cs" />
+    <Compile Include="ViewModels\Employee\EmployeeDatatables.cs" />
+    <Compile Include="ViewModels\Employee\EmployeeStatusViewModel.cs" />
+    <Compile Include="ViewModels\Employee\EmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseCategoryDatatables.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseCategoryStatusViewModel.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseCategoryViewModel.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseDatatables.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseDetailListReport.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseDetailViewModel.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseListReport.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseReportParam.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseStatusViewModel.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseViewModel.cs" />
+    <Compile Include="ViewModels\Expense\TransportConfirmExpenseViewModel.cs" />
+    <Compile Include="ViewModels\Expense\TruckExpenseDatatables.cs" />
+    <Compile Include="ViewModels\Expense\TruckExpenseStatusViewModel.cs" />
+    <Compile Include="ViewModels\Expense\TruckExpenseViewModel.cs" />
+    <Compile Include="ViewModels\Feature\FeatureDatatables.cs" />
+    <Compile Include="ViewModels\Feature\FeatureStatusViewModel.cs" />
+    <Compile Include="ViewModels\Feature\FeatureViewModel.cs" />
+    <Compile Include="ViewModels\FileUpload\FileUploadViewModel.cs" />
+    <Compile Include="ViewModels\FixedExpense\FixedExpenseData.cs" />
+    <Compile Include="ViewModels\FixedExpense\FixedExpenseViewModel.cs" />
+    <Compile Include="ViewModels\FuelConsumption\FuelConsumptionDatatable.cs" />
+    <Compile Include="ViewModels\FuelConsumption\FuelConsumptionDetailDatatable.cs" />
+    <Compile Include="ViewModels\FuelConsumption\FuelConsumptionDetailParams.cs" />
+    <Compile Include="ViewModels\FuelConsumption\FuelConsumptionDetailSearchParams.cs" />
+    <Compile Include="ViewModels\FuelConsumption\FuelConsumptionDetailViewModel.cs" />
+    <Compile Include="ViewModels\FuelConsumption\FuelConsumptionPatternParams.cs" />
+    <Compile Include="ViewModels\FuelConsumption\FuelConsumptionViewModel.cs" />
+    <Compile Include="ViewModels\Gps\GpsViewModel.cs" />
+    <Compile Include="ViewModels\InspectionDetail\InspectionDetailViewModel.cs" />
+    <Compile Include="ViewModels\InspectionPlanDetail\InspectionMaintenancePlanViewModel.cs" />
+    <Compile Include="ViewModels\InspectionPlanDetail\InspectionPlanDetailViewModel.cs" />
+    <Compile Include="ViewModels\Inspection\InspectionViewModel.cs" />
+    <Compile Include="ViewModels\InvoiceInfo\InvoiceInfoViewModel.cs" />
+    <Compile Include="ViewModels\Liabilities\LiabilitiesDatatables.cs" />
+    <Compile Include="ViewModels\Liabilities\LiabilitiesExpenseViewModel.cs" />
+    <Compile Include="ViewModels\Liabilities\LiabilitiesViewModel.cs" />
+    <Compile Include="ViewModels\License\LicenseViewModel.cs" />
+    <Compile Include="ViewModels\Location\LocationDatatables.cs" />
+    <Compile Include="ViewModels\Location\LocationStatusViewModel.cs" />
+    <Compile Include="ViewModels\Location\LocationViewModel.cs" />
+    <Compile Include="ViewModels\MaintenanceDetail\MaintenanceDetailViewModel.cs" />
+    <Compile Include="ViewModels\MaintenanceDetail\TruckMaintenanceDetailViewModel.cs" />
+    <Compile Include="ViewModels\MaintenanceItemDetail\MaintenaceItemDetailForUpdate.cs" />
+    <Compile Include="ViewModels\MaintenanceItemDetail\MaintenanceItemDetailViewModel.cs" />
+    <Compile Include="ViewModels\MaintenanceItem\MaintenanceItemViewModel.cs" />
+    <Compile Include="ViewModels\MaintenancePlanDetail\MaintenancePlanDetailViewModel.cs" />
+    <Compile Include="ViewModels\Mobile\Dispatch\MobileDispatchList.cs" />
+    <Compile Include="ViewModels\Mobile\Dispatch\MobileDispatchViewModel.cs" />
+    <Compile Include="ViewModels\Mobile\UploadImage\ImageUploadViewModel.cs" />
+    <Compile Include="ViewModels\Mobile\UploadImage\ListImageUploadViewModel.cs" />
+    <Compile Include="ViewModels\Model\ModelDatatables.cs" />
+    <Compile Include="ViewModels\Model\ModelViewModel.cs" />
+    <Compile Include="ViewModels\Operation\OperationViewModel.cs" />
+    <Compile Include="ViewModels\Operation\OperationViewModelForUpdate.cs" />
+    <Compile Include="ViewModels\OrderPattern\ContractTariffPatternDatatable.cs" />
+    <Compile Include="ViewModels\OrderPattern\ContractTariffPatternViewModel.cs" />
+    <Compile Include="ViewModels\OrderPattern\ContractTariffViewModel.cs" />
+    <Compile Include="ViewModels\OrderPattern\OrderPatternDatatable.cs" />
+    <Compile Include="ViewModels\OrderPattern\OrderPatternViewModel.cs" />
+    <Compile Include="ViewModels\OrderPattern\PartnerContractTariffPatternDatatable.cs" />
+    <Compile Include="ViewModels\OrderPattern\PartnerContractTariffPatternViewModel.cs" />
+    <Compile Include="ViewModels\OrderPattern\PartnerContractTariffViewModel.cs" />
+    <Compile Include="ViewModels\OrderPattern\TarrifPatternViewModel.cs" />
+    <Compile Include="ViewModels\Order\CommodityViewModel.cs" />
+    <Compile Include="ViewModels\Order\OrderContainerViewModel.cs" />
+    <Compile Include="ViewModels\Order\OrderDatatable.cs" />
+    <Compile Include="ViewModels\Order\OrderDetailListReport.cs" />
+    <Compile Include="ViewModels\Order\OrderListReport.cs" />
+    <Compile Include="ViewModels\Order\OrderReportParam.cs" />
+    <Compile Include="ViewModels\Order\OrderViewModel.cs" />
+    <Compile Include="ViewModels\Order\TransportationPlanReport.cs" />
+    <Compile Include="ViewModels\Order\TransportConfirmOrderViewModel.cs" />
+    <Compile Include="ViewModels\Order\TransportConfirmViewModel.cs" />
+    <Compile Include="ViewModels\PartnerPayment\PartnerPaymentDatatable.cs" />
+    <Compile Include="ViewModels\PartnerPayment\PartnerPaymentViewModel.cs" />
+    <Compile Include="ViewModels\Partner\PartnerDatatables.cs" />
+    <Compile Include="ViewModels\Partner\PartnerInvoiceSettlementViewModel.cs" />
+    <Compile Include="ViewModels\Partner\PartnerInvoiceViewModel.cs" />
+    <Compile Include="ViewModels\Partner\PartnerSettlementViewModel.cs" />
+    <Compile Include="ViewModels\Partner\PartnerStatusViewModel.cs" />
+    <Compile Include="ViewModels\Partner\PartnerViewModel.cs" />
+    <Compile Include="ViewModels\Report\CombinedRevenue\CombinedExpenseReportData.cs" />
+    <Compile Include="ViewModels\Report\CombinedRevenue\CombinedRevenueReportParam.cs" />
+    <Compile Include="ViewModels\Report\CustomerBalance\CustomerBalanceReportData.cs" />
+    <Compile Include="ViewModels\Report\CustomerBalance\CustomerBalanceReportExpense.cs" />
+    <Compile Include="ViewModels\Report\CustomerExpense\CustomerExpenseReportData.cs" />
+    <Compile Include="ViewModels\Report\CustomerExpense\CustomerExpenseReportParam.cs" />
+    <Compile Include="ViewModels\Report\CustomerPayment\CustomerPaymentDetailReportData.cs" />
+    <Compile Include="ViewModels\Report\CustomerPayment\CustomerPaymentReportData.cs" />
+    <Compile Include="ViewModels\Report\CustomerPayment\CustomerPaymentReportParam.cs" />
+    <Compile Include="ViewModels\Report\CustomerPricing\CustomerPricingExpenseDetailReportData.cs" />
+    <Compile Include="ViewModels\Report\CustomerPricing\CustomerPricingReportData.cs" />
+    <Compile Include="ViewModels\Report\CustomerPricing\CustomerPricingReportParam.cs" />
+    <Compile Include="ViewModels\Report\CustomerRevenue\CustomerRevenueGeneralReportData.cs" />
+    <Compile Include="ViewModels\Report\CustomerRevenue\CustomerRevenueReportData.cs" />
+    <Compile Include="ViewModels\Report\DriverRevenue\DriverRevenueReportData.cs" />
+    <Compile Include="ViewModels\Report\DriverRevenue\DriverRevenueReportParam.cs" />
+    <Compile Include="ViewModels\Report\FuelConsumption\FuelConsumptionDetailReportParam.cs" />
+    <Compile Include="ViewModels\Report\FuelConsumption\FuelConsumptionReportData.cs" />
+    <Compile Include="ViewModels\Report\FuelConsumption\FuelConsumptionReportParam.cs" />
+    <Compile Include="ViewModels\Report\Liabilities\LiabilitiesReportData.cs" />
+    <Compile Include="ViewModels\Report\Maintenance\MaintenanceReportData.cs" />
+    <Compile Include="ViewModels\Report\Maintenance\MaintenanceReportDevice.cs" />
+    <Compile Include="ViewModels\Report\Maintenance\MaintenanceReportInspection.cs" />
+    <Compile Include="ViewModels\Report\Maintenance\MaintenanceReportMaintenance.cs" />
+    <Compile Include="ViewModels\Report\Maintenance\MaintenanceReportParam.cs" />
+    <Compile Include="ViewModels\Report\Maintenance\TransportMaintenanceReportData.cs" />
+    <Compile Include="ViewModels\Report\PartnerBalance\PartnerBalanceReportData.cs" />
+    <Compile Include="ViewModels\Report\PartnerBalance\PartnerBalanceReportExpense.cs" />
+    <Compile Include="ViewModels\Report\PartnerCustomer\PartnerCustomerExpenseReportData.cs" />
+    <Compile Include="ViewModels\Report\PartnerCustomer\PartnerCustomerExpenseReportParam.cs" />
+    <Compile Include="ViewModels\Report\PartnerExpense\PartnerExpenseReportData.cs" />
+    <Compile Include="ViewModels\Report\PartnerExpense\PartnerExpenseReportParam.cs" />
+    <Compile Include="ViewModels\Report\PartnerPayment\PartnerPaymentDetailReportData.cs" />
+    <Compile Include="ViewModels\Report\PartnerPayment\PartnerPaymentReportData.cs" />
+    <Compile Include="ViewModels\Report\PartnerPayment\PartnerPaymentReportParam.cs" />
+    <Compile Include="ViewModels\Report\SupplierExpense\SupplierExpenseReportData.cs" />
+    <Compile Include="ViewModels\Report\SupplierExpense\SupplierExpenseReportParam.cs" />
+    <Compile Include="ViewModels\Report\TruckBalance\TruckBalanceReportData.cs" />
+    <Compile Include="ViewModels\Report\TruckBalance\TruckBalanceReportExpense.cs" />
+    <Compile Include="ViewModels\Report\TruckBalance\TruckBalanceReportParam.cs" />
+    <Compile Include="ViewModels\Report\TruckBalance\TruckBalanceReportTransportFee.cs" />
+    <Compile Include="ViewModels\Report\TruckBalance\TruckBalanceReportTruckList.cs" />
+    <Compile Include="ViewModels\Report\TruckExpense\TruckExpenseReportContainerCount.cs" />
+    <Compile Include="ViewModels\Report\TruckExpense\TruckExpenseReportData.cs" />
+    <Compile Include="ViewModels\Report\TruckExpense\TruckExpenseReportExpense.cs" />
+    <Compile Include="ViewModels\Report\TruckExpense\TruckExpenseReportExpenseDetail.cs" />
+    <Compile Include="ViewModels\Report\TruckExpense\TruckExpenseReportParam.cs" />
+    <Compile Include="ViewModels\Report\TruckExpense\TruckExpenseReportTransportFee.cs" />
+    <Compile Include="ViewModels\Report\TruckExpense\TruckExpenseReportTruckList.cs" />
+    <Compile Include="ViewModels\Report\TruckRevenue\TruckRevenueReportData.cs" />
+    <Compile Include="ViewModels\Report\TruckRevenue\TruckRevenueReportParam.cs" />
+    <Compile Include="ViewModels\RoleFeatures\RoleFeaturesViewModel.cs" />
+    <Compile Include="ViewModels\Role\RoleDatatables.cs" />
+    <Compile Include="ViewModels\Role\RoleViewModel.cs" />
+    <Compile Include="ViewModels\Route\RouteDatatable.cs" />
+    <Compile Include="ViewModels\Route\RouteExpenseViewModel.cs" />
+    <Compile Include="ViewModels\Route\RouteViewModel.cs" />
+    <Compile Include="ViewModels\Ship\ShipperDatatables.cs" />
+    <Compile Include="ViewModels\Ship\ShipperStatusViewModel.cs" />
+    <Compile Include="ViewModels\Ship\ShipperViewModel.cs" />
+    <Compile Include="ViewModels\Ship\ShippingCompanyDatatables.cs" />
+    <Compile Include="ViewModels\Ship\ShippingCompanyStatusViewModel.cs" />
+    <Compile Include="ViewModels\Ship\ShippingCompanyViewModel.cs" />
+    <Compile Include="ViewModels\Ship\VesselViewModel.cs" />
+    <Compile Include="ViewModels\Supplier\SupplierDatatables.cs" />
+    <Compile Include="ViewModels\Supplier\SupplierInvoiceSettlementViewModel.cs" />
+    <Compile Include="ViewModels\Supplier\SupplierInvoiceViewModel.cs" />
+    <Compile Include="ViewModels\Supplier\SupplierSettlementViewModel.cs" />
+    <Compile Include="ViewModels\Supplier\SupplierStatusViewModel.cs" />
+    <Compile Include="ViewModels\Supplier\SupplierViewModel.cs" />
+    <Compile Include="ViewModels\Surcharge\SurchargeDetailViewModel.cs" />
+    <Compile Include="ViewModels\Surcharge\TransportConfirmSurchargeViewModel.cs" />
+    <Compile Include="ViewModels\TextResource\TextResourceViewModel.cs" />
+    <Compile Include="ViewModels\Trailer\SuggestedWarningTrailer.cs" />
+    <Compile Include="ViewModels\Trailer\TrailerDatatables.cs" />
+    <Compile Include="ViewModels\Trailer\TrailerInspectionViewModel.cs" />
+    <Compile Include="ViewModels\Trailer\TrailerListViewModel.cs" />
+    <Compile Include="ViewModels\Trailer\TrailerViewModel.cs" />
+    <Compile Include="ViewModels\TransportDistance\TransportDistanceDatatable.cs" />
+    <Compile Include="ViewModels\TransportDistance\TransportDistanceViewModel.cs" />
+    <Compile Include="ViewModels\Truck\TruckDatatables.cs" />
+    <Compile Include="ViewModels\Truck\TruckInspectionViewModel.cs" />
+    <Compile Include="ViewModels\Truck\TruckMaintenanceViewModel.cs" />
+    <Compile Include="ViewModels\Truck\TruckMaintenanceViewModelForUpdate.cs" />
+    <Compile Include="ViewModels\Truck\TruckViewModel.cs" />
+    <Compile Include="ViewModels\User\UserDatatables.cs" />
+    <Compile Include="ViewModels\User\UserViewModel.cs" />
+    <Compile Include="ViewModels\Vessel\VesselDatatables.cs" />
+    <Compile Include="ViewModels\Vessel\VesselStatusViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service References\" />
+    <Folder Include="ViewModels\OrderType\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Root\Root.csproj">
+      <Project>{a27e1274-33e6-4db2-8c35-4689fd24f601}</Project>
+      <Name>Root</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

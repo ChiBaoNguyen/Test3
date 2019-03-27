@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DriverAllowanceList" targetNamespace="http://tempuri.org/DriverAllowanceList.xsd" xmlns:mstns="http://tempuri.org/DriverAllowanceList.xsd" xmlns="http://tempuri.org/DriverAllowanceList.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DriverAllowanceList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DriverAllowanceList" msprop:Generator_UserDSName="DriverAllowanceList">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DriverAllowanceList" msprop:Generator_TableClassName="DriverAllowanceListDataTable" msprop:Generator_TableVarName="tableDriverAllowanceList" msprop:Generator_RowChangedName="DriverAllowanceListRowChanged" msprop:Generator_TablePropName="_DriverAllowanceList" msprop:Generator_RowDeletingName="DriverAllowanceListRowDeleting" msprop:Generator_RowChangingName="DriverAllowanceListRowChanging" msprop:Generator_RowEvHandlerName="DriverAllowanceListRowChangeEventHandler" msprop:Generator_RowDeletedName="DriverAllowanceListRowDeleted" msprop:Generator_RowClassName="DriverAllowanceListRow" msprop:Generator_UserTableName="DriverAllowanceList" msprop:Generator_RowEvArgName="DriverAllowanceListRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No" msprop:Generator_ColumnVarNameInTable="columnNo" msprop:Generator_ColumnPropNameInRow="No" msprop:Generator_ColumnPropNameInTable="NoColumn" msprop:Generator_UserColumnName="No" type="xs:string" minOccurs="0" />
+              <xs:element name="Day" msprop:Generator_ColumnVarNameInTable="columnDay" msprop:Generator_ColumnPropNameInRow="Day" msprop:Generator_ColumnPropNameInTable="DayColumn" msprop:Generator_UserColumnName="Day" type="xs:string" minOccurs="0" />
+              <xs:element name="OrderD" msprop:Generator_ColumnVarNameInTable="columnOrderD" msprop:Generator_ColumnPropNameInRow="OrderD" msprop:Generator_ColumnPropNameInTable="OrderDColumn" msprop:Generator_UserColumnName="OrderD" type="xs:string" minOccurs="0" />
+              <xs:element name="ExpenseN" msprop:Generator_ColumnVarNameInTable="columnExpenseN" msprop:Generator_ColumnPropNameInRow="ExpenseN" msprop:Generator_ColumnPropNameInTable="ExpenseNColumn" msprop:Generator_UserColumnName="ExpenseN" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DriverAllowanceDetail" msprop:Generator_TableClassName="DriverAllowanceDetailDataTable" msprop:Generator_TableVarName="tableDriverAllowanceDetail" msprop:Generator_TablePropName="DriverAllowanceDetail" msprop:Generator_RowDeletingName="DriverAllowanceDetailRowDeleting" msprop:Generator_RowChangingName="DriverAllowanceDetailRowChanging" msprop:Generator_RowEvHandlerName="DriverAllowanceDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="DriverAllowanceDetailRowDeleted" msprop:Generator_UserTableName="DriverAllowanceDetail" msprop:Generator_RowChangedName="DriverAllowanceDetailRowChanged" msprop:Generator_RowEvArgName="DriverAllowanceDetailRowChangeEvent" msprop:Generator_RowClassName="DriverAllowanceDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No" msprop:Generator_ColumnVarNameInTable="columnNo" msprop:Generator_ColumnPropNameInRow="No" msprop:Generator_ColumnPropNameInTable="NoColumn" msprop:Generator_UserColumnName="No" type="xs:string" minOccurs="0" />
+              <xs:element name="TransportD" msprop:Generator_ColumnVarNameInTable="columnTransportD" msprop:Generator_ColumnPropNameInRow="TransportD" msprop:Generator_ColumnPropNameInTable="TransportDColumn" msprop:Generator_UserColumnName="TransportD" type="xs:string" minOccurs="0" />
+              <xs:element name="OrderNo" msprop:Generator_ColumnVarNameInTable="columnOrderNo" msprop:Generator_ColumnPropNameInRow="OrderNo" msprop:Generator_ColumnPropNameInTable="OrderNoColumn" msprop:Generator_UserColumnName="OrderNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerN" msprop:Generator_ColumnVarNameInTable="columnCustomerN" msprop:Generator_ColumnPropNameInRow="CustomerN" msprop:Generator_ColumnPropNameInTable="CustomerNColumn" msprop:Generator_UserColumnName="CustomerN" type="xs:string" minOccurs="0" />
+              <xs:element name="ContainerNo" msprop:Generator_ColumnVarNameInTable="columnContainerNo" msprop:Generator_ColumnPropNameInRow="ContainerNo" msprop:Generator_ColumnPropNameInTable="ContainerNoColumn" msprop:Generator_UserColumnName="ContainerNo" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="DriverAllowance" msprop:Generator_ColumnVarNameInTable="columnDriverAllowance" msprop:Generator_ColumnPropNameInRow="DriverAllowance" msprop:Generator_ColumnPropNameInTable="DriverAllowanceColumn" msprop:Generator_UserColumnName="DriverAllowance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OtherDriverAllowance" msprop:Generator_ColumnVarNameInTable="columnOtherDriverAllowance" msprop:Generator_ColumnPropNameInRow="OtherDriverAllowance" msprop:Generator_ColumnPropNameInTable="OtherDriverAllowanceColumn" msprop:Generator_UserColumnName="OtherDriverAllowance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DriverC" msprop:Generator_ColumnVarNameInTable="columnDriverC" msprop:Generator_ColumnPropNameInRow="DriverC" msprop:Generator_ColumnPropNameInTable="DriverCColumn" msprop:Generator_UserColumnName="DriverC" type="xs:string" minOccurs="0" />
+              <xs:element name="DriverN" msprop:Generator_ColumnVarNameInTable="columnDriverN" msprop:Generator_ColumnPropNameInRow="DriverN" msprop:Generator_ColumnPropNameInTable="DriverNColumn" msprop:Generator_UserColumnName="DriverN" type="xs:string" minOccurs="0" />
+              <xs:element name="NetWeight" msprop:Generator_ColumnVarNameInTable="columnNetWeight" msprop:Generator_ColumnPropNameInRow="NetWeight" msprop:Generator_ColumnPropNameInTable="NetWeightColumn" msprop:Generator_UserColumnName="NetWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="AllowanceOfDriver" msprop:Generator_ColumnVarNameInTable="columnAllowanceOfDriver" msprop:Generator_ColumnPropNameInRow="AllowanceOfDriver" msprop:Generator_ColumnPropNameInTable="AllowanceOfDriverColumn" msprop:Generator_UserColumnName="AllowanceOfDriver" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalAdvanceMoneyRemaining" msprop:Generator_ColumnVarNameInTable="columnTotalAdvanceMoneyRemaining" msprop:Generator_ColumnPropNameInRow="TotalAdvanceMoneyRemaining" msprop:Generator_ColumnPropNameInTable="TotalAdvanceMoneyRemainingColumn" msprop:Generator_UserColumnName="TotalAdvanceMoneyRemaining" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalOtherMoney" msprop:Generator_ColumnVarNameInTable="columnTotalOtherMoney" msprop:Generator_ColumnPropNameInRow="TotalOtherMoney" msprop:Generator_ColumnPropNameInTable="TotalOtherMoneyColumn" msprop:Generator_UserColumnName="TotalOtherMoney" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalSalary" msprop:Generator_ColumnVarNameInTable="columnTotalSalary" msprop:Generator_ColumnPropNameInRow="TotalSalary" msprop:Generator_ColumnPropNameInTable="TotalSalaryColumn" msprop:Generator_UserColumnName="TotalSalary" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UnitPriceRate" msprop:Generator_ColumnVarNameInTable="columnUnitPriceRate" msprop:Generator_ColumnPropNameInRow="UnitPriceRate" msprop:Generator_ColumnPropNameInTable="UnitPriceRateColumn" msprop:Generator_UserColumnName="UnitPriceRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BasicSalary" msprop:Generator_ColumnVarNameInTable="columnBasicSalary" msprop:Generator_ColumnPropNameInRow="BasicSalary" msprop:Generator_ColumnPropNameInTable="BasicSalaryColumn" msprop:Generator_UserColumnName="BasicSalary" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SettlementMoney" msprop:Generator_TableClassName="SettlementMoneyDataTable" msprop:Generator_TableVarName="tableSettlementMoney" msprop:Generator_TablePropName="SettlementMoney" msprop:Generator_RowDeletingName="SettlementMoneyRowDeleting" msprop:Generator_RowChangingName="SettlementMoneyRowChanging" msprop:Generator_RowEvHandlerName="SettlementMoneyRowChangeEventHandler" msprop:Generator_RowDeletedName="SettlementMoneyRowDeleted" msprop:Generator_UserTableName="SettlementMoney" msprop:Generator_RowChangedName="SettlementMoneyRowChanged" msprop:Generator_RowEvArgName="SettlementMoneyRowChangeEvent" msprop:Generator_RowClassName="SettlementMoneyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DriverC" msprop:Generator_ColumnVarNameInTable="columnDriverC" msprop:Generator_ColumnPropNameInRow="DriverC" msprop:Generator_ColumnPropNameInTable="DriverCColumn" msprop:Generator_UserColumnName="DriverC" type="xs:string" minOccurs="0" />
+              <xs:element name="SettlementD" msprop:Generator_ColumnVarNameInTable="columnSettlementD" msprop:Generator_ColumnPropNameInRow="SettlementD" msprop:Generator_ColumnPropNameInTable="SettlementDColumn" msprop:Generator_UserColumnName="SettlementD" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="No" msprop:Generator_ColumnVarNameInTable="columnNo" msprop:Generator_ColumnPropNameInRow="No" msprop:Generator_ColumnPropNameInTable="NoColumn" msprop:Generator_UserColumnName="No" type="xs:string" minOccurs="0" />
+              <xs:element name="LiabilitiesAmount" msprop:Generator_ColumnVarNameInTable="columnLiabilitiesAmount" msprop:Generator_ColumnPropNameInRow="LiabilitiesAmount" msprop:Generator_ColumnPropNameInTable="LiabilitiesAmountColumn" msprop:Generator_UserColumnName="LiabilitiesAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PaymentAmount" msprop:Generator_ColumnVarNameInTable="columnPaymentAmount" msprop:Generator_ColumnPropNameInRow="PaymentAmount" msprop:Generator_ColumnPropNameInTable="PaymentAmountColumn" msprop:Generator_UserColumnName="PaymentAmount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

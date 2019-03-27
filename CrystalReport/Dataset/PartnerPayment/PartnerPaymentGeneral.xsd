@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PartnerPaymentGeneral" targetNamespace="http://tempuri.org/PartnerPaymentGeneral.xsd" xmlns:mstns="http://tempuri.org/PartnerPaymentGeneral.xsd" xmlns="http://tempuri.org/PartnerPaymentGeneral.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PartnerPaymentGeneral" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PartnerPaymentGeneral" msprop:Generator_UserDSName="PartnerPaymentGeneral">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PartnerPaymentGeneral" msprop:Generator_TableClassName="PartnerPaymentGeneralDataTable" msprop:Generator_TableVarName="tablePartnerPaymentGeneral" msprop:Generator_TablePropName="_PartnerPaymentGeneral" msprop:Generator_RowDeletingName="PartnerPaymentGeneralRowDeleting" msprop:Generator_RowChangingName="PartnerPaymentGeneralRowChanging" msprop:Generator_RowEvHandlerName="PartnerPaymentGeneralRowChangeEventHandler" msprop:Generator_RowDeletedName="PartnerPaymentGeneralRowDeleted" msprop:Generator_UserTableName="PartnerPaymentGeneral" msprop:Generator_RowChangedName="PartnerPaymentGeneralRowChanged" msprop:Generator_RowEvArgName="PartnerPaymentGeneralRowChangeEvent" msprop:Generator_RowClassName="PartnerPaymentGeneralRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PartnerName" msprop:Generator_ColumnVarNameInTable="columnPartnerName" msprop:Generator_ColumnPropNameInRow="PartnerName" msprop:Generator_ColumnPropNameInTable="PartnerNameColumn" msprop:Generator_UserColumnName="PartnerName" type="xs:string" minOccurs="0" />
+              <xs:element name="OpeningBalance" msprop:Generator_ColumnVarNameInTable="columnOpeningBalance" msprop:Generator_ColumnPropNameInRow="OpeningBalance" msprop:Generator_ColumnPropNameInTable="OpeningBalanceColumn" msprop:Generator_UserColumnName="OpeningBalance" type="xs:double" minOccurs="0" />
+              <xs:element name="ClosingBalance" msprop:Generator_ColumnVarNameInTable="columnClosingBalance" msprop:Generator_ColumnPropNameInRow="ClosingBalance" msprop:Generator_ColumnPropNameInTable="ClosingBalanceColumn" msprop:Generator_UserColumnName="ClosingBalance" type="xs:double" minOccurs="0" />
+              <xs:element name="OwnExpense" msprop:Generator_ColumnVarNameInTable="columnOwnExpense" msprop:Generator_ColumnPropNameInRow="OwnExpense" msprop:Generator_ColumnPropNameInTable="OwnExpenseColumn" msprop:Generator_UserColumnName="OwnExpense" type="xs:double" minOccurs="0" />
+              <xs:element name="OweExpense" msprop:Generator_ColumnVarNameInTable="columnOweExpense" msprop:Generator_ColumnPropNameInRow="OweExpense" msprop:Generator_ColumnPropNameInTable="OweExpenseColumn" msprop:Generator_UserColumnName="OweExpense" type="xs:double" minOccurs="0" />
+              <xs:element name="PartnerExpense" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPartnerExpense" msprop:Generator_ColumnPropNameInRow="PartnerExpense" msprop:Generator_ColumnPropNameInTable="PartnerExpenseColumn" msprop:Generator_UserColumnName="PartnerExpense" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PartnerPaymentDetail" msprop:Generator_TableClassName="PartnerPaymentDetailDataTable" msprop:Generator_TableVarName="tablePartnerPaymentDetail" msprop:Generator_RowChangedName="PartnerPaymentDetailRowChanged" msprop:Generator_TablePropName="PartnerPaymentDetail" msprop:Generator_RowDeletingName="PartnerPaymentDetailRowDeleting" msprop:Generator_RowChangingName="PartnerPaymentDetailRowChanging" msprop:Generator_RowEvHandlerName="PartnerPaymentDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="PartnerPaymentDetailRowDeleted" msprop:Generator_RowClassName="PartnerPaymentDetailRow" msprop:Generator_UserTableName="PartnerPaymentDetail" msprop:Generator_RowEvArgName="PartnerPaymentDetailRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PartnerName" msdata:Caption="CustomerName" msprop:Generator_ColumnVarNameInTable="columnPartnerName" msprop:Generator_ColumnPropNameInRow="PartnerName" msprop:Generator_ColumnPropNameInTable="PartnerNameColumn" msprop:Generator_UserColumnName="PartnerName" type="xs:string" minOccurs="0" />
+              <xs:element name="OpeningBalance" msprop:Generator_ColumnVarNameInTable="columnOpeningBalance" msprop:Generator_ColumnPropNameInRow="OpeningBalance" msprop:Generator_ColumnPropNameInTable="OpeningBalanceColumn" msprop:Generator_UserColumnName="OpeningBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ClosingBalance" msprop:Generator_ColumnVarNameInTable="columnClosingBalance" msprop:Generator_ColumnPropNameInRow="ClosingBalance" msprop:Generator_ColumnPropNameInTable="ClosingBalanceColumn" msprop:Generator_UserColumnName="ClosingBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OwnExpense" msprop:Generator_ColumnVarNameInTable="columnOwnExpense" msprop:Generator_ColumnPropNameInRow="OwnExpense" msprop:Generator_ColumnPropNameInTable="OwnExpenseColumn" msprop:Generator_UserColumnName="OwnExpense" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OweExpense" msprop:Generator_ColumnVarNameInTable="columnOweExpense" msprop:Generator_ColumnPropNameInRow="OweExpense" msprop:Generator_ColumnPropNameInTable="OweExpenseColumn" msprop:Generator_UserColumnName="OweExpense" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PartnerExpense" msprop:Generator_ColumnVarNameInTable="columnPartnerExpense" msprop:Generator_ColumnPropNameInRow="PartnerExpense" msprop:Generator_ColumnPropNameInTable="PartnerExpenseColumn" msprop:Generator_UserColumnName="PartnerExpense" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Commodity" msprop:Generator_ColumnVarNameInTable="columnCommodity" msprop:Generator_ColumnPropNameInRow="Commodity" msprop:Generator_ColumnPropNameInTable="CommodityColumn" msprop:Generator_UserColumnName="Commodity" type="xs:string" minOccurs="0" />
+              <xs:element name="ContainerType" msprop:Generator_ColumnVarNameInTable="columnContainerType" msprop:Generator_ColumnPropNameInRow="ContainerType" msprop:Generator_ColumnPropNameInTable="ContainerTypeColumn" msprop:Generator_UserColumnName="ContainerType" type="xs:string" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" msprop:Generator_UserColumnName="UnitPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="No" msprop:Generator_ColumnVarNameInTable="columnNo" msprop:Generator_ColumnPropNameInRow="No" msprop:Generator_ColumnPropNameInTable="NoColumn" msprop:Generator_UserColumnName="No" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

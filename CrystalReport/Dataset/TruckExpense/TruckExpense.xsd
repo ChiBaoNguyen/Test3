@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TruckExpense" targetNamespace="http://tempuri.org/TruckExpense.xsd" xmlns:mstns="http://tempuri.org/TruckExpense.xsd" xmlns="http://tempuri.org/TruckExpense.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TruckExpense" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TruckExpense" msprop:Generator_UserDSName="TruckExpense">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TruckExpense" msprop:Generator_TableClassName="TruckExpenseDataTable" msprop:Generator_TableVarName="tableTruckExpense" msprop:Generator_RowChangedName="TruckExpenseRowChanged" msprop:Generator_TablePropName="_TruckExpense" msprop:Generator_RowDeletingName="TruckExpenseRowDeleting" msprop:Generator_RowChangingName="TruckExpenseRowChanging" msprop:Generator_RowEvHandlerName="TruckExpenseRowChangeEventHandler" msprop:Generator_RowDeletedName="TruckExpenseRowDeleted" msprop:Generator_RowClassName="TruckExpenseRow" msprop:Generator_UserTableName="TruckExpense" msprop:Generator_RowEvArgName="TruckExpenseRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegisteredNo" msprop:Generator_ColumnVarNameInTable="columnRegisteredNo" msprop:Generator_ColumnPropNameInRow="RegisteredNo" msprop:Generator_ColumnPropNameInTable="RegisteredNoColumn" msprop:Generator_UserColumnName="RegisteredNo" type="xs:string" minOccurs="0" />
+              <xs:element name="ContainerCount" msprop:Generator_ColumnVarNameInTable="columnContainerCount" msprop:Generator_ColumnPropNameInRow="ContainerCount" msprop:Generator_ColumnPropNameInTable="ContainerCountColumn" msprop:Generator_UserColumnName="ContainerCount" type="xs:string" minOccurs="0" />
+              <xs:element name="TransportFee" msprop:Generator_ColumnVarNameInTable="columnTransportFee" msprop:Generator_ColumnPropNameInRow="TransportFee" msprop:Generator_ColumnPropNameInTable="TransportFeeColumn" msprop:Generator_UserColumnName="TransportFee" type="xs:string" minOccurs="0" />
+              <xs:element name="Expense" msprop:Generator_ColumnVarNameInTable="columnExpense" msprop:Generator_ColumnPropNameInRow="Expense" msprop:Generator_ColumnPropNameInTable="ExpenseColumn" msprop:Generator_UserColumnName="Expense" type="xs:string" minOccurs="0" />
+              <xs:element name="MaintenanceExpense" msprop:Generator_ColumnVarNameInTable="columnMaintenanceExpense" msprop:Generator_ColumnPropNameInRow="MaintenanceExpense" msprop:Generator_ColumnPropNameInTable="MaintenanceExpenseColumn" msprop:Generator_UserColumnName="MaintenanceExpense" type="xs:string" minOccurs="0" />
+              <xs:element name="FixedExpense" msprop:Generator_ColumnVarNameInTable="columnFixedExpense" msprop:Generator_ColumnPropNameInRow="FixedExpense" msprop:Generator_ColumnPropNameInTable="FixedExpenseColumn" msprop:Generator_UserColumnName="FixedExpense" type="xs:string" minOccurs="0" />
+              <xs:element name="AverageExpense" msprop:Generator_ColumnVarNameInTable="columnAverageExpense" msprop:Generator_ColumnPropNameInRow="AverageExpense" msprop:Generator_ColumnPropNameInTable="AverageExpenseColumn" msprop:Generator_UserColumnName="AverageExpense" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ExpenseDetail" msprop:Generator_TableClassName="ExpenseDetailDataTable" msprop:Generator_TableVarName="tableExpenseDetail" msprop:Generator_TablePropName="ExpenseDetail" msprop:Generator_RowDeletingName="ExpenseDetailRowDeleting" msprop:Generator_RowChangingName="ExpenseDetailRowChanging" msprop:Generator_RowEvHandlerName="ExpenseDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="ExpenseDetailRowDeleted" msprop:Generator_UserTableName="ExpenseDetail" msprop:Generator_RowChangedName="ExpenseDetailRowChanged" msprop:Generator_RowEvArgName="ExpenseDetailRowChangeEvent" msprop:Generator_RowClassName="ExpenseDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TruckC" msprop:Generator_ColumnVarNameInTable="columnTruckC" msprop:Generator_ColumnPropNameInRow="TruckC" msprop:Generator_ColumnPropNameInTable="TruckCColumn" msprop:Generator_UserColumnName="TruckC" type="xs:string" minOccurs="0" />
+              <xs:element name="RegisteredNo" msprop:Generator_ColumnVarNameInTable="columnRegisteredNo" msprop:Generator_ColumnPropNameInRow="RegisteredNo" msprop:Generator_ColumnPropNameInTable="RegisteredNoColumn" msprop:Generator_UserColumnName="RegisteredNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CategoryC" msprop:Generator_ColumnVarNameInTable="columnCategoryC" msprop:Generator_ColumnPropNameInRow="CategoryC" msprop:Generator_ColumnPropNameInTable="CategoryCColumn" msprop:Generator_UserColumnName="CategoryC" type="xs:string" minOccurs="0" />
+              <xs:element name="CategoryN" msprop:Generator_ColumnVarNameInTable="columnCategoryN" msprop:Generator_ColumnPropNameInRow="CategoryN" msprop:Generator_ColumnPropNameInTable="CategoryNColumn" msprop:Generator_UserColumnName="CategoryN" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
